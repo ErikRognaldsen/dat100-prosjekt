@@ -11,7 +11,7 @@ public class DayMain {
 
         double[] powerprices_day = DayPowerData.powerprices_day;
 
-        System.out.println("==============");
+        System.out.println("==============HALLO");
         System.out.println("OPPGAVE 1");
         System.out.println("==============");
         System.out.println();
