@@ -5,14 +5,18 @@ public class DailyPower {
     // a) print power prices during a day
     public static void printPowerPrices(double[] prices) {
 
-        // TODO
+        for (double price : prices) {
+            System.out.println(price);
+        }
 
     }
 
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
 
-        // TODO
+        for (double price : usage) {
+            System.out.println(price);
+        }
 
     }
 
@@ -21,7 +25,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for (double use : usage) {
+            sum += use;
+        }
 
         return sum;
     }
@@ -31,7 +37,9 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            price += prices[i] * usage[i];
+        }
 
         return price;
     }
@@ -44,7 +52,9 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        if (price > THRESHOLD) {
+            support = PERCENTAGE * (usage*price);
+        }
 
         return support;
     }
@@ -54,7 +64,9 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        for  (int i = 0; i < usage.length; i++) {
+            support += getSupport(usage[i], prices[i]);
+        }
 
         return support;
     }
@@ -66,7 +78,9 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for  (int i = 0; i < usage.length; i++) {
+            price += usage[i] * NORGESPRIS_KWH;
+        }
 
         return price;
     }
@@ -76,7 +90,11 @@ public class DailyPower {
 
         double temp_max = 0;
 
-        // TODO
+        for  (int i = 0; i < usage.length; i++) {
+            if (usage[i] > temp_max) {
+                temp_max = usage[i];
+            }
+        }
 
         return temp_max;
     }
@@ -84,8 +102,12 @@ public class DailyPower {
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
+        double total = 0;
 
-        // TODO
+        for  (int i = 0; i < usage.length; i++) {
+            total += usage[i];
+        }
+        average = total / usage.length;
 
         return average;
     }
