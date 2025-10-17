@@ -8,9 +8,7 @@ public class Customers {
 
     // a) Complete constructor
     public Customers(int size) {
-
-        // TODO
-
+        this.customers = new Customer[size];
     }
 
     // b) count number of non-null references
@@ -19,7 +17,11 @@ public class Customers {
 
         int count = 0;
 
-        // TODO
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                count++;
+            }
+        }
 
         return count;
     }
@@ -30,8 +32,12 @@ public class Customers {
         boolean funnet = false;
         Customer c = null;
 
-        // TODO
-
+        for (int i = 0; i < customers.length; i++) {
+            if (customer_id == customers[i].getCustomer_id()) {
+                funnet = true;
+                c =  customers[i];
+            }
+        }
         return c;
     }
 

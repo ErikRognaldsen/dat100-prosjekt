@@ -15,7 +15,7 @@ public class CustomerMain {
         System.out.println(kunde.toString());
 
         kunde.customer_id = 1001;
-        kunde.agreement = PowerAgreementType.NORGESPRICE;
+        kunde.agreement = PowerAgreementType.SPOTPRICE;
         kunde.email = "Knut1@knutsen.no";
         kunde.name = "Knut1";
         System.out.println(kunde.toString());
