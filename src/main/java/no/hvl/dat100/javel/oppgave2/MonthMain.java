@@ -16,14 +16,14 @@ public class MonthMain {
         System.out.println("OPPGAVE 2");
         System.out.println("==============");
         System.out.println();
-
-        /*
-        TODO
-
-         Write code that tests the methods you implement in the MonthlyPower class
-         Remember to teste the methods as you implement them
-         Remember to also to check that you get the expected results
-         */
-
+        MonthlyPower.print_PowerUsage(power_usage_month);
+        System.out.println("===============");
+        MonthlyPower.print_PowerPrices(power_prices_month);
+        System.out.println("===============");
+        System.out.println(MonthlyPower.computePowerUsage(power_usage_month) + " kWh");
+        System.out.println(MonthlyPower.exceedThreshold(power_usage_month, 908.0));
+        System.out.println(MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month) + " ,- NOK");
+        System.out.println(MonthlyPower.computePowerSupport(power_usage_month, power_prices_month) + " ,- NOK");
+        System.out.println(MonthlyPower.computeNorgesPrice(power_usage_month) + " ,- NOK");
     }
 }
